@@ -400,10 +400,6 @@ h2.subtitle {
     margin-bottom: 20px;
 }
 
-.item-box:nth-child(odd) > .experience-box {
-    left: 50%;
-}
-
 .experience-dot {
     position: absolute;
     width: 25px;
@@ -417,9 +413,14 @@ h2.subtitle {
     left: 43%;
 }
 
-.item-box:nth-child(odd) .experience-dot {
+.item-box:nth-child(2) .experience-dot {
     border-radius: 50% 50% 3px 50%;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.item-box:nth-child() > .experience-box {
+    left: 50%;
 }
 
 .exp-position, .works-title {
@@ -484,6 +485,9 @@ h2.subtitle {
 /* /end Technical Skills */
 
 /* SoftSkill */
+
+.soft-skill-box {
+}
 
 .soft-skill {
     background-color: #19c;

@@ -389,7 +389,7 @@ h2.subtitle {
     position: relative;
 }
 
-.item-box > .experience-box {
+.experience-box {
     width: 280px;
     min-height: 150px;
     padding: 15px;
@@ -398,10 +398,6 @@ h2.subtitle {
     position: relative;
     margin-right: 10px;
     margin-bottom: 20px;
-}
-
-.item-box:nth-child(odd) > .experience-box {
-    left: 50%;
 }
 
 .experience-dot {
@@ -417,9 +413,14 @@ h2.subtitle {
     left: 43%;
 }
 
-.item-box:nth-child(odd) .experience-dot {
+.item-box > .experience-box.box-2 ~ .experience-dot, .item-box > .experience-box.box-4 ~ .experience-dot, .item-box > .experience-box.box-6 ~ .experience-dot {
     border-radius: 50% 50% 3px 50%;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.item-box > .experience-box.box-2, .item-box > .experience-box.box-4, .item-box > .experience-box.box-6 {
+    left: 50%;
 }
 
 .exp-position, .works-title {
@@ -484,6 +485,9 @@ h2.subtitle {
 /* /end Technical Skills */
 
 /* SoftSkill */
+
+.soft-skill-box {
+}
 
 .soft-skill {
     background-color: #19c;
