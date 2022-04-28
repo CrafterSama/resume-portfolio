@@ -3,6 +3,12 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+    scrollbar-color: rgba(17, 153, 204) rgba(150,150,150, 0.0);
+    scrollbar-width: thin;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -201,7 +207,7 @@ header {
     padding: 0 0 4rem;
     margin-top: 50px;
     position: relative;
-    background: url(../assets/images/bg.jpg);
+    background: url(/assets/images/bg.jpg);
     z-index: 1;
     overflow: hidden;
     background-position: center;
@@ -303,7 +309,7 @@ h2.subtitle {
 /* Clouds */
 
 .top-cloud {
-    background-image: url(../assets/images/dark-cloud.svg);
+    background-image: url(/assets/images/dark-cloud.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -318,12 +324,12 @@ h2.subtitle {
 }
 
 .bottom-cloud {
-    background-image: url(../assets/images/cloud.svg);
+    background-image: url(/assets/images/cloud.svg);
     background-size: 111%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #303d46;
-    min-height: 270px;
+    min-height: 320px;
 }
 
 /* Clouds */
@@ -371,9 +377,10 @@ h2.subtitle {
 
 .experience-line {
     position: absolute;
-    width: 315px;
-    height: 93%;
+    width: 307px;
+    height: 94%;
     border-right: 2px solid #19c;
+    left: 10px;
 }
 
 .experience-section {
@@ -385,8 +392,15 @@ h2.subtitle {
     position: relative;
 }
 
+.experience-timeline {
+    max-height: 110vh;
+    padding-top: 15px;
+    overflow-y: auto;
+}
+
 .item-box {
     position: relative;
+    padding: 0 0 0 15px;
 }
 
 .item-box > .experience-box {
@@ -414,7 +428,7 @@ h2.subtitle {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     top: 45%;
-    left: 43%;
+    left: 44.5%;
 }
 
 .item-box:nth-child(odd) .experience-dot {
@@ -568,6 +582,11 @@ h2.subtitle {
 
 .works-technologies {
     font-size: 12px;
+}
+
+.icons {
+    top: 8px;
+    position: relative;
 }
 
 /* footer */
