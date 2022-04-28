@@ -7,9 +7,9 @@ import TopCloud from '../common/Clouds/TopCloud';
 
 const hero = {
     name: "Julmer Olivero",
-    position: "Semi-Senior Full Stack Web Developer",
-    slogan: "From the Frontend to the Backend without restrictions!",
-    description: "Principally, I am a Father and Husband, but in my work time, I am a Full Stack Developer with years of experience. Last 4 years, I have worked mainly as a Frontend Developer, but working with Backend is not a problem to me. My specialities are Javascript, ReactJS, Redux, SASS/CSS, HTML5, PHP, Laravel, SQL and NoSQL Databases, but I can handle any work needed as I am constantly learning and upgrading my skills with new languages and frameworks and new programming challenges."
+    position: "Frontend React Developer",
+    slogan: "With a tiny background in the backend stack",
+    description: "I've, for the last 5 years, worked as a Frontend Developer, but the last 3 of that 5, I've mainly worked as a Frontend React Developer, I've also developed the necessary skillset so I can work as a Backend Developer as well. Javascript, React, Redux, VueJS, SASS/CSS, HTML5, PHP, Laravel, NodeJS+ExpressJS, NextJS, Apollo, Yoga, GraphQL, SQL and NoSQL Databases are my top, current, skill areas."
 }
 
 const Hero = () => {
@@ -28,12 +28,12 @@ const Hero = () => {
             <div id="bigHeaderOne" className="middle-bg-one animated fadeInRightLarge"></div>
             <div id="bigHeaderTwo" className="middle-bg-two animated fadeInLeftLarge"></div>
             <div className="header-body text-center">
-                <figure className="about-picture animated fadeInUp delay-800ms">
-                    <Image className="picture-profile" src={avatar} alt="Julmer Olivero" width={250} height={250}/>
-                </figure>
                 <h1 className="header-title animated fadeInUp delay-1s">
                     {hero.name}
                 </h1>
+                <figure className="about-picture animated fadeInUp delay-800ms">
+                    <Image className="picture-profile" src={avatar} alt="Julmer Olivero" width={250} height={250}/>
+                </figure>
                 <div className="hero-body">
                     <div className="floating-description animated fadeInDown">
                         <div className="subtitle-hero animated float slow-motion infinite">
