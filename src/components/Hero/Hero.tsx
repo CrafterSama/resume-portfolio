@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import rocketSVG from '../../assets/images/rocket.svg';
-import avatar from '../../assets/images/new-avatar.jpg';
+//import avatar from '../../assets/images/new-avatar.jpg';
 
 import TopCloud from '../common/Clouds/TopCloud';
 
@@ -9,7 +9,7 @@ const hero = {
     name: "Julmer Olivero",
     position: "Frontend React Developer",
     slogan: "With a tiny background in the backend stack",
-    description: "I've, for the last 5 years, worked as a Frontend Developer, but the last 3 of that 5, I've mainly worked as a Frontend React Developer, I've also developed the necessary skillset so I can work as a Backend Developer as well. Javascript, React, Redux, VueJS, SASS/CSS, HTML5, PHP, Laravel, NodeJS+ExpressJS, NextJS, Apollo, Yoga, GraphQL, SQL and NoSQL Databases are my top, current, skill areas."
+    description: "I've, for the last 8 years, worked as a Frontend Developer, but the last 5 of that 8, I've mainly worked as a Frontend React Developer, I've also developed the necessary skillset so I can work as a Backend Developer as well. Javascript, React, Redux, VueJS, SASS/CSS, HTML5, PHP, Laravel, NodeJS+ExpressJS, NextJS, Apollo, Yoga, GraphQL, SQL and NoSQL Databases are my top, current, skill areas."
 }
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
                     {hero.name}
                 </h1>
                 <figure className="about-picture animated fadeInUp delay-800ms">
-                    <Image className="picture-profile" src={avatar} alt="Julmer Olivero" width={250} height={250}/>
+                    <Image className="picture-profile" src="https://pbs.twimg.com/profile_images/1443553463758110723/hKO3dZtq_400x400.jpg" alt="Julmer Olivero" width={250} height={250}/>
                 </figure>
                 <div className="hero-body">
                     <div className="floating-description animated fadeInDown">
