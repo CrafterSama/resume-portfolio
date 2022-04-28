@@ -207,7 +207,7 @@ header {
     padding: 0 0 4rem;
     margin-top: 50px;
     position: relative;
-    background: url(/assets/images/bg.jpg);
+    background: url(./assets/images/bg.jpg);
     z-index: 1;
     overflow: hidden;
     background-position: center;
@@ -309,7 +309,7 @@ h2.subtitle {
 /* Clouds */
 
 .top-cloud {
-    background-image: url(/assets/images/dark-cloud.svg);
+    background-image: url(./assets/images/dark-cloud.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -324,7 +324,7 @@ h2.subtitle {
 }
 
 .bottom-cloud {
-    background-image: url(/assets/images/cloud.svg);
+    background-image: url(./assets/images/cloud.svg);
     background-size: 111%;
     background-position: center;
     background-repeat: no-repeat;
