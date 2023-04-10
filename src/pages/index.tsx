@@ -6,8 +6,10 @@ import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Hero from '../components/Hero';
 import Works from '../components/Works';
+import { useSession } from '@supabase/auth-helpers-react';
 
 const Home: NextPage = () => {
+  const session = useSession();
   return (
     <div className="App">
       <Head>
@@ -17,7 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero />
+      <Hero session={session} />
       <Experience />
       <Works />
       <Contact />
