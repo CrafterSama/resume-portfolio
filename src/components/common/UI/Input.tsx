@@ -2,6 +2,7 @@ import { FC, InputHTMLAttributes } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import Label from './Label';
+import Show from './Show';
 
 type ExposedNativeInputProps =
   | 'autoComplete'
@@ -83,11 +84,11 @@ const Input: FC<InputProps> = ({
           } ${className} ${errors?.[name] ? 'border-red-400' : ''}`}
           {...props}
         />
-        {right && (
+        <Show condition={right as boolean}>
           <div className="absolute inset-y-0 right-0 pl-3 flex items-center pointer-events-none">
             <span className="text-gray-500 sm:text-sm">{right}</span>
           </div>
-        )}
+        </Show>
       </div>
       {hint && (
         <div className="flex flex-row justify-start">
