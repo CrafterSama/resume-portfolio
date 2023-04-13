@@ -1,1 +1,1 @@
-export { default } from './SoftSkills'
+export { default } from './SoftSkills';

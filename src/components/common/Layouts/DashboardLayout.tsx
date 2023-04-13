@@ -20,4 +20,5 @@ const DashboardLayout = ({ session, children }) => {
     </main>
   );
 };
+
 export default DashboardLayout;
