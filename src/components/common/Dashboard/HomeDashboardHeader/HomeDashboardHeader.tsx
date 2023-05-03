@@ -1,6 +1,6 @@
+import { Button } from '@components/common/UI/Button';
 import { LogoutIcon } from '@heroicons/react/outline';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
-import { Button, Title, Text } from '@tremor/react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
@@ -45,16 +45,16 @@ const HomeDashboardHeader = ({ session }) => {
   return (
     <div className="flex flex-row justify-between items-center">
       <div>
-        <Title>
+        <h1 className="text-3xl text-gray-700 font-semibold shadow-none">
           <Link href="/">
             {profile?.name} {profile?.last_name}
           </Link>
-        </Title>
-        <Text>{profile?.position}</Text>
+        </h1>
+        <small className="text-gray-400 font-light text-sm">{profile?.position}</small>
       </div>
       <div className="flex flex-row gap-4 justify-start items-center">
-        <Text color="gray">{user?.email}</Text>
-        <Button onClick={() => supabase.auth.signOut()} icon={LogoutIcon} iconPosition="left" color="gray" size="xs">
+        <small className="text-gray-400 font-light text-sm">{user?.email}</small>
+        <Button onClick={() => supabase.auth.signOut()} icon={LogoutIcon} color="gray" size="small">
           Logout
         </Button>
       </div>

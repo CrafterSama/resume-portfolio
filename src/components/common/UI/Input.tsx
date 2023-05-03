@@ -63,13 +63,15 @@ const Input: FC<InputProps> = ({
 
   return (
     <div className="flex flex-col gap-2">
-      {label && <Label htmlFor={name}>{label}</Label>}
-      <div className="mt-1 relative rounded-md shadow-sm">
-        {left && (
+      <Show condition={Boolean(label)}>
+        <Label htmlFor={name}>{label}</Label>
+      </Show>
+      <div className="input-container">
+        <Show condition={Boolean(left)}>
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <span className="text-gray-500 sm:text-sm">{left}</span>
           </div>
-        )}
+        </Show>
         <input
           {...register(name)}
           type={type}
@@ -84,29 +86,29 @@ const Input: FC<InputProps> = ({
           } ${className} ${errors?.[name] ? 'border-red-400' : ''}`}
           {...props}
         />
-        <Show condition={right as boolean}>
+        <Show condition={Boolean(right)}>
           <div className="absolute inset-y-0 right-0 pl-3 flex items-center pointer-events-none">
             <span className="text-gray-500 sm:text-sm">{right}</span>
           </div>
         </Show>
       </div>
-      {hint && (
+      <Show condition={Boolean(hint)}>
         <div className="flex flex-row justify-start">
           <div className="text-gray-400 text-xs">{hint} </div>
         </div>
-      )}
-      {charactersCount >= 0 && charactersCount !== null ? (
+      </Show>
+      <Show condition={charactersCount >= 0 && charactersCount !== null}>
         <div className="flex flex-row justify-end">
           <div className={`${charactersCount > 75 ? 'text-red-400' : 'text-gray-400'} text-xs`}>
             {`Cantidad de Caracteres: ${charactersCount}`}
           </div>
         </div>
-      ) : null}
-      {errors?.[name] && (
+      </Show>
+      <Show condition={Boolean(errors?.[name])}>
         <div className="flex flex-row justify-start mt-1">
           <div className="text-red-400">{errors?.[name]?.message as string} </div>
         </div>
-      )}
+      </Show>
     </div>
   );
 };
@@ -119,11 +121,11 @@ export const InputWithoutContext = ({ disabled = false, className = '', hint = '
         className={`rounded-md shadow-sm border-2 outline-2 border-blue-300 disabled:bg-gray-50 disabled:text-gray-400 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-2 w-full ${className}`}
         {...props}
       />
-      {hint && (
-        <div className="flex flex-row justify-between mt-1">
-          <div className="text-gray-400">{hint} </div>
+      <Show condition={Boolean(hint)}>
+        <div className="flex flex-row justify-start">
+          <div className="text-gray-400 text-xs">{hint} </div>
         </div>
-      )}
+      </Show>
     </div>
   );
 };

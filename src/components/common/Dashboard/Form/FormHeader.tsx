@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { CgSpinner } from 'react-icons/cg';
 
-import { PencilIcon } from '@heroicons/react/outline';
-import { Button } from '@tremor/react';
+import { Button } from '@components/common/UI/Button';
 import RoundedButton from '@components/common/UI/RoundedButton';
+import { PencilIcon } from '@heroicons/react/outline';
 
 type FormHeaderProps = {
   title: string;
@@ -49,10 +49,10 @@ const FormHeader: FC<FormHeaderProps> = ({
           </RoundedButton>
         ) : (
           <>
-            <Button type="button" variant="light" onClick={cancelAction}>
+            <Button type="button" fill="none" onClick={cancelAction}>
               {secondaryActionText}
             </Button>
-            <Button type="submit" disabled={isSaving}>
+            <Button type="submit" isDisabled={isSaving}>
               {primaryActionText}
             </Button>
           </>

@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app';
 
 import '../styles/main.css';
 import '../styles/global.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function MyApp({
   Component,
@@ -15,12 +16,15 @@ function MyApp({
   initialSession: Session;
 }>) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
+  const queryClient = new QueryClient();
 
   return (
-    <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
-      <Toaster richColors position="top-right" />
-      <Component {...pageProps} />
-    </SessionContextProvider>
+    <QueryClientProvider client={queryClient}>
+      <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
+        <Toaster richColors position="top-right" />
+        <Component {...pageProps} />
+      </SessionContextProvider>
+    </QueryClientProvider>
   );
 }
 export default MyApp;
